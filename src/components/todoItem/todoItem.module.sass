@@ -1,0 +1,56 @@
+.todo
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-size: 16px
+    width: 100%
+    transition: all .3s ease
+    padding: 15px
+    &__title
+        width: 85%
+    &:hover
+        background: rgba(255, 160, 0, 0.3)
+    &__edit
+        background: none
+        width: 85%
+        border: none
+        border-bottom: 2px solid rgba(0,0,0,0.5)
+        transition: all .3s ease
+        &:focus
+            outline: none
+            border-bottom: 2px solid rgba(0,0,0,1)
+    &__navigate
+        display: flex
+        align-items: center
+        gap: 15px
+        &_edit, &_complete, &_remove
+            width: 20px
+            height: 20px
+            cursor: pointer
+    &__body
+        display: flex
+        align-items: center
+        gap: 10px
+        width: 100%
+    &__status
+        border: 1px solid black
+        height: 25px
+        width: 25px
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        border-radius: 100%
+        transition: all .3s ease
+        &_inner
+            width: 18px
+            stroke: black
+            transition: all .3s ease
+    &.active .todo
+        &__status
+            background: green
+            border: 1px solid green
+            &_inner
+                stroke: #ffffff
+        &__title
+            text-decoration: line-through

@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after
+    box-sizing: border-box
+
+
+ul[class],
+ol[class]
+    padding: 0
+
+
+body, h1, h2, h3, h4, p, ul, ol, li, figure, figcaption, blockquote, dl, dd
+    margin: 0
+
+html
+    scroll-behavior: smooth
+
+body
+    min-height: 100vh
+    text-rendering: optimizeSpeed
+    background-size: cover
+    font-family: "Roboto"
+    background-image: linear-gradient( 108.3deg,  rgba(252,198,41,1) 11.2%, rgba(209,5,5,1) 84.1% )
+ul[class], ol[class]
+    list-style: none
+
+
+a:not([class]), a
+    text-decoration-skip-ink: auto
+    text-decoration: none
+
+
+img
+    max-width: 100%
+    display: block
+
+
+article > * + *
+    margin-top: 1em
+
+input,
+button,
+textarea,
+select
+    font: inherit
+
+.container
+    display: flex
+    width: 100%
+    justify-content: center
+    padding: 100px 0
+
+.list
+    width: 500px
+    background: #ffffff
+    border-radius: 10px
+    padding-bottom: 20px
+    box-shadow: 0px 0px 25px 16px rgba(34, 60, 80, 0.2)
+    @media(max-width: 550px)
+        width: 95%
+    &__header
+        background: #ffa000
+        color: #fff
+        padding: 20px
+        border-top-right-radius: 10px
+        border-top-left-radius: 10px
+        font-size: 20px
+        text-transform: uppercase
+        margin-bottom: 10px
+    &__form
+        position: relative
+        width: 100%
+        margin-bottom: 10px
+        &-input
+            width: 100%
+            padding: 10px 50px 10px 10px
+            border: none
+            border-bottom: 2px solid rgba(0,0,0,0.5)
+            transition: all .3s ease
+            &:focus
+                outline: none
+                border-bottom: 2px solid rgba(0,0,0,1)
+        &-button
+            width: 25px
+            cursor: pointer
+            position: absolute
+            right: 10px
+            top: 50%
+            transform: translateY(-50%)
+    &__wrapper
+        display: flex
+        flex-direction: column
+    &__empty
+        text-align: center
+        font-size: 14px
+        opacity: 0.7
+        margin-top: 10px
